@@ -4,8 +4,6 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import EditIcon from "../component/atoms/EditIcon";
-import DeleteIcon from "../component/atoms/DeleteIcon";
 import Lists from "../component/molecules/Lists";
 
 function Icon({ id, open }) {
