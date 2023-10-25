@@ -33,7 +33,6 @@ const Lists = () => {
                 </div>
             </div>
         </div>
-        
     );
 }
 

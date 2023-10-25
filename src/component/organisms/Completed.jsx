@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import Lists from "../component/molecules/Lists";
+import Lists from "../molecules/Lists";
 
 function Icon({ id, open }) {
     return (
