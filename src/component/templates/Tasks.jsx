@@ -1,7 +1,7 @@
-import Completed from "../../organisms/Completed";
 import EmptyList from "../atoms/EmptyList";
 import Header from "../atoms/Header";
 import InputTasks from "../molecules/InputTasks";
+import Completed from "../organisms/Completed";
 
 const Tasks = () => {
     return(
