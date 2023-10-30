@@ -9,7 +9,7 @@ const Tasks = () => {
         <div className="container-fluid">
             <Header />
             <Lists />
-            <Completed />
+            <Completed/>
             <InputTasks />
         </div>
     );
