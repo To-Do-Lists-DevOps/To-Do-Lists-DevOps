@@ -7,13 +7,14 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER
       },
       task: {
         type: Sequelize.STRING
       },
       status: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue : "pending"
       },
       createdAt: {
         allowNull: false,

@@ -6,8 +6,7 @@ async function createTodo(req,res){
     try{
         const {toDo} = req.body
         const input = await Tasks.create({
-            task : toDo,
-            status: "pending"
+            task : toDo
         })
         const response={
             task: input.task,
@@ -51,7 +50,6 @@ async function pendingToDo(req,res){
                 status:"pending"
             }
         })
-
         res.status(200).json(data)
     }catch(error){
         res.status(500).json({
