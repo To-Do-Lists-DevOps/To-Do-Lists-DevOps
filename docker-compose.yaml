@@ -1,0 +1,48 @@
+version: "3"
+services:
+  reactjs_app:
+    container_name: reactjs-todolists
+    # build: 
+    #   context: ../to-do-lists/
+    #   dockerfile: Dockerfile
+    image: fndsjy/reactjs-todolists
+    ports:
+      - "3000:3000"
+    networks:
+      mynetwork:
+        ipv4_address: 172.9.0.3
+  nodejs_app:
+    container_name: nodejs-todolists
+    # build: 
+    #   context: ./
+    #   dockerfile: Dockerfile
+    image: fndsjy/nodejs-todolists
+    ports:
+      - "8000:8000"
+    networks:
+      mynetwork:
+        ipv4_address: 172.9.0.5
+  postgresql:
+    image: fndsjy/postgresql-todolists
+    container_name: postgresql-todolists
+    environment:
+      POSTGRES_DB: todo-lists
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: fendys
+    ports:
+      - "5432:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      mynetwork:
+        ipv4_address: 172.9.0.7
+volumes:
+  database:
+    external: true
+networks:
+  mynetwork:
+    name: mynetwork
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.9.0.0/16
