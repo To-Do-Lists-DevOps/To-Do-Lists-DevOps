@@ -11,7 +11,7 @@ const Tasks = () => {
     const [todos, setTodos] = useState([])
     const [completeTodos, setCompleteTodos] = useState([])
     const [showInput, setShowInput] = useState({});
-    const BASE_URL = 'http://localhost:8000';
+    const BASE_URL = 'http://localhost:31386';
 
 
     const getPendingTodos = async () => {
